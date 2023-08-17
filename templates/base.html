@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <nav>
+            <ul>
+                <li><a href="{{url_for('Home_page')}}">Home</a></li>
+                <li><a href="{{url_for('About_page')}}">About</a></li>
+                <li><a href="{{url_for('Blog_page')}}">Blog</a></li>
+            </ul>
+        </nav>
+    {%block content%} {% endblock content %}
+        <footer>
+            <p>&copy; 2023 Interstrate</p>
+        </footer>
+    </div>
+</body>
+</html>

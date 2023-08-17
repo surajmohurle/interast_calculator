@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{%block content%}
+        <main>
+            <div class="calculator">
+                <h2>Interest Calculator</h2>
+                <form id="calculator-form">
+                    <label for="principal">Principal Amount (Rs):</label>
+                    <input type="number" id="principal" name="principal" default="Rs10000" required>
+                    <label for="rate">Annual Interest Rate (%):</label>
+                    <input type="number" id="rate" name="rate" step="0.01" default="7%" required>
+                    <label for="period">Period (years):</label>
+                    <input type="number" id="period" name="period" step="0.01"default="5y"  required>
+                    <button type="button" id="calculate-button">Calculate</button>
+                </form>
+                <div id="results" class="result">
+                    <button id="recalculate-button" class="hidden">Re-calculate</button>
+                </div>
+            </div>
+            
+        </main>
+        
+        {%endblock content%}   
